@@ -1,0 +1,13 @@
+{
+    "name": "robtob/bots",
+    "autoload": {
+        "psr-4": {
+            "Robtob\\Bots\\": "src/"
+        }
+    },
+    "require": {
+        "php-webdriver/webdriver": "^1.16",
+        "chrome-php/chrome": "^1.15",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
