@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg1: #161616;
+    --bg2: #090909;
+    --user: rgb(9, 15, 130);
+}
+
+body{
+    width: 100dvw;
+    height: 100dvh;
+    max-width: 100%;
+}
+
+nav{
+    width: 100%;
+    background-color: var(--bg1);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.icon{
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Montserrat";
+}
+
+.greem{
+    color: green;
+}
+
+.links{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Google Sans Code";
+}
+
+.sign{
+    font-family: "Google Sans Code";
+    background-color: var(--bg2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+#Home{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(rgba(19, 19, 19, 0.552), rgba(19, 19, 19, 0.58)), url("/media/bgheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 10px;
+
+    h1{
+        color: white;
+        font-family: "Montserrat";
+    }
+
+    p{
+        color: white;
+        font-family: monospace;
+
+        a{
+            text-decoration:  none;
+            color: green;
+            font-size: 14px;
+        }
+    }
+
+    .box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        a{
+            text-decoration:  none;
+            font-family: "Google Sans Code";
+            width: 45%;
+        }
+    }
+}
+
+.btn1{
+    color: green;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+        
+.btn2{
+    background-color: transparent;
+    border: green 2px  solid;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+#Main{
+    width: 100%;
+    height: 250px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        width: 100%;
+        font-family: "Montserrat";
+    }
+
+    p{
+        margin-top: 10px;
+        font-family: "Google Sans Code";
+        font-size: 15px;
+        background-color: var(--bg1);
+        color: white;
+        padding: 10px;
+        line-height: 25px;
+
+    }
+
+    .User{
+        background-color: var(--user);
+        padding: 2px;
+        border-radius:10px;
+        img{
+            width: 10px;
+            margin-right: 4px;
+        }
+    }
+
+} 
+
+.script{
+    width: 150px;
+    margin: auto;
+}
+
+.codedark {
+    color: #22c55e;
+    font-family: monospace;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #22c55e 0%,
+        #22c55e 40%,
+        #ffffff 50%,
+        #22c55e 60%,
+        #22c55e 100%
+    );
+
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+.bg{
+    background-color: black;
+     padding: 2px;
+    border-radius:10px;
+}

@@ -10,7 +10,8 @@ ROUTER(
         "/dashboard" => "models/dashboard.php",
 
         // PRIVATES //
-        "/auth-register" => "register.php"
+        "/auth-register" => "register.php",
+        "/auth-login" => "login.php"
     ],
 
     "error.php",

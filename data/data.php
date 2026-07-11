@@ -1,8 +1,8 @@
 <?php
 
-$host = "localhost";
+$host = "192.168.10.11";
 $dbname = "reetools";
-$user = "root";
+$user = "PC";
 $pass = "a1b2c3";
 
 $reevisa = new PDO(

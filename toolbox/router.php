@@ -15,7 +15,38 @@ function ROUTER($routes = [], $notFound = null, $allowedDirs = []){
 
     $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
     $uri = rtrim($uri, "/") ?: "/";
+    
+    // Servir archivos estáticos desde /public
+    $staticFile = realpath($baseDir . $uri);
 
+    if (
+        $staticFile &&
+        str_starts_with($staticFile, $baseDir) &&
+        is_file($staticFile)
+    ) {
+        $ext = strtolower(pathinfo($staticFile, PATHINFO_EXTENSION));
+
+        $mime = [
+            'css'  => 'text/css',
+            'js'   => 'application/javascript',
+            'png'  => 'image/png',
+            'jpg'  => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'gif'  => 'image/gif',
+            'svg'  => 'image/svg+xml',
+            'ico'  => 'image/x-icon',
+            'woff' => 'font/woff',
+            'woff2'=> 'font/woff2',
+            'ttf'  => 'font/ttf',
+        ];
+
+        if (isset($mime[$ext])) {
+            header("Content-Type: " . $mime[$ext]);
+        }
+
+        readfile($staticFile);
+        return;
+    }
     if (isset($routes[$uri])) {
 
         $target = ltrim($routes[$uri], "/");
