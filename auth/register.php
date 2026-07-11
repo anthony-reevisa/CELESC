@@ -26,7 +26,8 @@ if ($reevisa->lastInsertId()) {
         "name" => $name,
         "email" => $email,
         "pass" => $pass,
-        "icon" => $icon
+        "icon" => $icon,
+        "id" => $reevisa->lastInsertId()
     ];
 
     GO("/dashboard");

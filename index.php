@@ -8,6 +8,7 @@ ROUTER(
         "/login" => "models/login.php",
         "/register" => "models/register.php",
         "/dashboard" => "models/dashboard.php",
+        "/pta-manager" => "models/pta.php",
 
         // PRIVATES //
         "/auth-register" => "register.php",

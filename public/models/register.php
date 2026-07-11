@@ -1,7 +1,8 @@
 <?php
 session_start();
-if(!empty($_SESSION['name'])){
+if(!empty($_SESSION['id'])){
     header("location: /dashboard");
+    exit();
 }
 ?>
 <!DOCTYPE html>
