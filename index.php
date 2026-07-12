@@ -12,7 +12,11 @@ ROUTER(
 
         // PRIVATES //
         "/auth-register" => "register.php",
-        "/auth-login" => "login.php"
+        "/auth-login" => "login.php",
+
+        // TOOLS //
+        "/active" => "active.php",
+        "/status" => "status.php"
     ],
 
     "error.php",
