@@ -1,11 +1,15 @@
 <?php
 require "vendor/autoload.php";
 require "functions/driver.php";
+require __DIR__ ."/../data/data.php";
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
 use HeadlessChromium\BrowserFactory;
 
 //==================================================//
+// OBTENER DATOS DE LA BASE //
+
+$leads = $reevisa->query("SELECT * FROM leads")->fetch(PDO::FETCH_ASSOC);
 
 $timeout = 10;
 $user = "projetos2@reevisa.com.br";
@@ -28,5 +32,7 @@ sleep(1);
 CLICK($page, 'ui-celesc-button[icon="arrow_forward"] button');
 SCROLL($page,'section.container');
 sleep(5);
-SCREEN($page, "nombre.png");
-sleep(40);
+SCREEN($page, "public/media/leads/ACRYSIO DIAS BITTENCOURT.png");
+sleep(5);
+CLICK($page, 'ui-celesc-link[size="small"]');
+sleep(5);

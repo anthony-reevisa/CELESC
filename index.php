@@ -16,7 +16,8 @@ ROUTER(
 
         // TOOLS //
         "/active" => "active.php",
-        "/status" => "status.php"
+        "/status" => "status.php",
+        "/guardar" => "guardar.php"
     ],
 
     "error.php",

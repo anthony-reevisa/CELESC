@@ -13,7 +13,7 @@ function ROUTER($routes = [], $notFound = null, $allowedDirs = []){
 
     if (!$baseDir) die("ERROR 404");
 
-    $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+    $uri = urldecode(parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
     $uri = rtrim($uri, "/") ?: "/";
     
     // Servir archivos estáticos desde /public

@@ -37,19 +37,21 @@ if(empty($_SESSION['id'])){
 
     <!-- FERRAMENTA DE PTAs -->
     <div class="workbox">
-        <form id="create_user" class="create_user">
-            <input type="text" name="name" placeholder="Nome">
-            <input type="text" name="protocolo_uc" placeholder="Protocol Ou UC">
-            <button type="submit">Registrar</button>
-        </form>
-        <div class="users">
-            <div class="cliente">
-                <h3>Michael gufman de tog <p>ID[56]</p></h3>
-                <img src="" alt="">
-            </div>
+        <div class="control">
+            Control
+            <form id="create_user" class="create_user">
+                <input type="text" name="name" placeholder="Nome">
+                <input type="text" name="protocolo_uc" placeholder="Protocol Ou UC">
+                <button id="submit">Registrar</button>
+            </form>
+            <button id="active">Atualizar</button>
+        </div>
+        <div class="users" id="users">
+
         </div>
     </div>
-    <!-- <script src="/js/tool.js"></script> -->
+    <script src="/js/tool.js"></script>
     <script src="/js/polling.js"></script>
+    <script src="/js/addUser.js"></script>
 </body>
 </html>

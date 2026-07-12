@@ -1,6 +1,6 @@
 <?php
 
-$host = "192.168.10.12";
+$host = "192.168.10.6";
 $dbname = "reetools";
 $user = "PC";
 $pass = "a1b2c3";
