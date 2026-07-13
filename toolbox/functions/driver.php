@@ -8,9 +8,13 @@ use HeadlessChromium\BrowserFactory;
 
 
 function BROWSER($headless = true){
-   return (new BrowserFactory())->createBrowser([
-       'headless' => $headless,
-   ]);
+    return (new BrowserFactory())->createBrowser([
+        'headless' => $headless,
+        'windowSize' => [1920, 1080],
+        'startupOptions' => [
+            '--window-size=1920,1080',
+        ],
+    ]);
 }
 
 
