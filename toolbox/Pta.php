@@ -15,7 +15,7 @@ $timeout = 10;
 $user = "projetos2@reevisa.com.br";
 $pass = "Celesc@0820";
 
-$browser = BROWSER();
+$browser = BROWSER(false );
 $page = PAGE($browser);
 
 // INICIAR PROCESO DE ENTRADA
@@ -31,9 +31,10 @@ foreach($leads as $lead){
     SEND($page,'ui-celesc-input input', $lead['protocolo']);
     sleep(1);
     CLICK($page, 'ui-celesc-button[icon="arrow_forward"] button');
+    sleep(2);
     SCROLL($page,'section.container');
     sleep(5);
     SCREEN($page, "public/media/leads/".$lead['name'].".png");
-    sleep(5);
+    sleep(2);
     CLICK($page, 'ui-celesc-link[size="small"]');
 }

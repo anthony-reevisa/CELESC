@@ -9,7 +9,7 @@
 :root{
     --bg1: #161616;
     --bg2: #090909;
-    --user: rgb(9, 15, 130);
+    --user: rgb(255, 255, 255);
 }
 
 body{
@@ -91,12 +91,14 @@ body{
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
+        font-family: "Montserrat";
+        font-weight: bolder;
 
         .user{
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 5px;
             color: white;
             text-decoration: none;
 

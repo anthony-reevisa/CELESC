@@ -45,6 +45,7 @@ if(empty($_SESSION['id'])){
                 <button id="submit">Registrar</button>
             </form>
             <button id="active">Atualizar</button>
+            <p id="state"></p>
         </div>
         <div class="users" id="users">
 

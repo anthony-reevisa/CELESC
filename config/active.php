@@ -1,4 +1,4 @@
 <?php
 
-echo "Activo";
-require __DIR__ ."/../toolbox/Pta.php";
+shell_exec("php ".__DIR__."/../toolbox/Pta.php");
+echo "Pronto";
